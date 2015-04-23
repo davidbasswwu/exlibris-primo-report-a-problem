@@ -6,7 +6,7 @@ http://library.wwu.edu/content/4769?permalink=http://onesearch.library.wwu.edu/W
 
 When designing your form, just be sure to make the IDs of your fields match the values in the drupal.php code.
 
-Here is a gif showning how it works:
+Here is a gif showing how it works:
 ![Alt animated gif of how it works](http://g.recordit.co/fRvoIliEvu.gif)
 
  
