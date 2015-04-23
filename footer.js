@@ -23,7 +23,7 @@
                 // find the href attribute for the exli permalink
             var exli_permalink_generated = recreateExLiPermalink(child_list_a);
                 // send that value to the recreate function and store it as this variable
-            var report_a_problem_url = "http://your.drupal.site.edu/content/form-id-goes-here?permalink=" + exli_permalink_generated;
+            var report_a_problem_url = "http://your.drupal.site.edu/content/form-id-goes-here?permalink_path=" + exli_permalink_generated;
                 // append the generated permalink to our target url
             $child_list.append("<li><a target='_blank' href='" + report_a_problem_url + "'> Report a Problem</a></li>");
                 // create a new "Report a Problem" link in the Actions list 
