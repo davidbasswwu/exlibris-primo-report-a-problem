@@ -1,7 +1,7 @@
 <?php 
 # put this code in your Drupal form, making sure that the #ids below match the fieldnames you used in your form
 
-$permalink_path = $_GET["permalink"];
+$permalink_path = $_GET["permalink_path"];
 # TODO: can we sanitize this variable?
 
 $permalink = "http://onesearch.library.wwu.edu/" . $permalink_path;
