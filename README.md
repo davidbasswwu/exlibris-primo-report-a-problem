@@ -5,3 +5,8 @@ To see it in action, go to http://onesearch.library.wwu.edu/, do a search, click
 http://library.wwu.edu/content/4769?permalink=http://onesearch.library.wwu.edu/WWU:CP71143170080001451
 
 When designing your form, just be sure to make the IDs of your fields match the values in the drupal.php code.
+
+Here is a gif showning how it works:
+![Alt animated gif of how it works](http://g.recordit.co/fRvoIliEvu.gif)
+
+ 
