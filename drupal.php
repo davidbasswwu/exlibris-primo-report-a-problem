@@ -1,8 +1,10 @@
 <?php 
 # put this code in your Drupal form, making sure that the #ids below match the fieldnames you used in your form
 
-$permalink = $_GET["permalink"];
-# TODO: sanitize $permalink 
+$permalink_path = $_GET["permalink"];
+# TODO: can we sanitize this variable?
+
+$permalink = "http://onesearch.library.wwu.edu/" . $permalink_path;
 
    drupal_add_js('
 
