@@ -8,7 +8,7 @@
 
         var docId = GetParameter(exli_permaLink,"docId");      // extract the docId value from that string
         var vid = GetParameter(exli_permaLink,"vid");           // extract the vid value from the exli_permalink string
-        var exli_permaLink_final = "http://onesearch.library.wwu.edu/" + vid + ":" + docId;     // put the pieces together
+        var exli_permaLink_final = vid + ":" + docId;     // put the pieces together
         return exli_permaLink_final;
     }
 
