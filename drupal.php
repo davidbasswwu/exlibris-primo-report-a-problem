@@ -4,7 +4,8 @@
 $permalink_path = $_GET["permalink_path"];
 # TODO: can we sanitize this variable?
 
-$permalink = "http://onesearch.library.wwu.edu/" . $permalink_path;
+$your_primo_domain_name = "http://onesearch.library.wwu.edu/";
+$permalink = $your_primo_domain_name . $permalink_path;
 
    drupal_add_js('
 
