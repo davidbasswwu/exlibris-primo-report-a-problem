@@ -2,18 +2,27 @@
     /* add this code to your Primo footer (or header) */
 
     function recreateExLiPermalink(exli_permaLink) {
-        // requires ExLibris Primo 4.6 (or higher)
-        exli_permaLink = exli_permaLink.split('?');     // split the exli_permalink at the question mark
-        exli_permaLink = exli_permaLink[1];             // use what follows the question mark
+        // Primo 4.6 introduced item-level permalinks, so let's use those instead of the homegrown permalinks
+        // var exli_permaLink = $(".EXLButtonSendToPermalink").find("a").attr("href");
+        // this should return something like
+            //    "permalink.do?docId=TN_springer_jour10.2165/00003495-200161130-00006&vid=WWU&fn=permalink"
+        //exli_permaLink = exli_permaLink.split('?');     // split the exli_permalink at the question mark
+        //exli_permaLink = exli_permaLink[1];             // use what follows the question mark
 
         var docId = GetParameter(exli_permaLink,"docId");      // extract the docId value from that string
         var vid = GetParameter(exli_permaLink,"vid");           // extract the vid value from the exli_permalink string
+        var worldcat = GetParameter(exli_permaLink,"worldcat");           // worldcat records have different permalinks
+        var wc = GetURLParameter("wc");     // on display.do pages, ExLibris indicates whether it is a Worldcat record with this querystring variable
+
+        if ((worldcat == "true") || (wc == "true")) {
+            docId = docId.replace("TN_","WC_");
+        }
+
         var exli_permaLink_final = vid + ":" + docId;     // put the pieces together
         return exli_permaLink_final;
     }
 
-
-	$(document).ready(function() {
+    $(document).ready(function() {
         // jQuery required (but it is already included with Primo)
 
        $(document).one("click", ".EXLTabHeaderButtonSendTo a", function() { 
